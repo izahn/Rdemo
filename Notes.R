@@ -121,4 +121,19 @@ c("a", "b", "c") %in% c("a", "b")
 
 ## 1. extract data for the name "ashley"
 
+ashley = (baby.names$Name == 'ashley')
+
+ashley = baby.names[which(ashley, arr.ind = TRUE),]
+
+ashley
 ## 2. Restrict the previous extraction to include only years between 200 and 2004
+
+subset = ashley[9:18,]
+
+subset
+
+## or
+
+subset1 = ashley[ashley$Year %in% c(2000:2004),]
+
+subset1 
