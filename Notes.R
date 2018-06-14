@@ -10,23 +10,21 @@
 sqrt(10)
 
 ## 3. Find R documentation "An introduction to R"
-help.start()
-
-
+#help.start()
 
 ## Getting help
 
 # browse the help
-help.start()
+#help.start()
 
 # help on a particular function
-help(sqrt)
+#help(sqrt)
 
 # same as above but shorter
-?sqrt
+#?sqrt
 
 # help on a particular package
-help(package = "base", )
+#help(package = "base", )
 
 ## don't use help.search(), do a web search instead!
 
@@ -46,8 +44,7 @@ s10 = sqrt(10)
 ### Functional programming
 
 ## the dot does _not_ indicate a method!
-help.start()
-
+#help.start()
 
 ## Example project
 ## We will examine baby names to find the most popular
@@ -57,7 +54,7 @@ help.start()
 ## http://tutorials.iq/harvard.edu/R/Rintro/dataSets/babyNames.csv
 
 ## the readr package has more reliable plain text readers
-install.packages("readr")
+#install.packages("readr")
 
 ## add a package to the search path
 library("readr")
@@ -71,26 +68,21 @@ library("readr")
 ## Exercise 2
 # 1. open the help for read_csv and figure out how to limit
 # the mumber of rows
-help(read_csv)
+#help(read_csv)
 
 # 2. read just the first 10 rows from 
 # http://tutorials.iq/harvard.edu/R/Rintro/dataSets/babyNames.csv
 read_csv("http://tutorials.iq.harvard.edu/R/Rintro/dataSets/babyNames.csv",
               n_max=10)
 
-
-
-
 # 3. read all the data and assign the result to an object named 
                                         # baby.names
 baby.names = read_csv("http://tutorials.iq.harvard.edu/R/Rintro/dataSets/babyNames.csv")
 
-
 ## data manipulation
 
 ## just use dplyr
-
-install.packages("dplyr")
+#install.packages("dplyr")
 
 library("dplyr")
 
