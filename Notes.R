@@ -120,5 +120,10 @@ c("a", "b", "c") %in% c("a", "b")
 ## Exercise 3
 
 ## 1. extract data for the name "ashley"
+filter(baby.names,
+       Name == "ashley")
 
 ## 2. Restrict the previous extraction to include only years between 200 and 2004
+
+filter(baby.names,
+       Name == "ashley" & Year %in% c(2000:2004))
