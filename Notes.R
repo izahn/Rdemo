@@ -3,30 +3,27 @@
 ## learn the R / Rstudio interface
 ##
 ## 1. Add 2 and 2
-2 + 2
 "+"(2, 2)
 
 ## 2. Calculate the square root of 10
 sqrt(10)
 
 ## 3. Find R documentation "An introduction to R"
-help.start()
-
-
+# help.start()
 
 ## Getting help
 
 # browse the help
-help.start()
+# help.start()
 
 # help on a particular function
-help(sqrt)
+# help(sqrt)
 
 # same as above but shorter
-?sqrt
+# ?sqrt
 
 # help on a particular package
-help(package = "base", )
+# help(package = "base", )
 
 ## don't use help.search(), do a web search instead!
 
@@ -46,7 +43,7 @@ s10 = sqrt(10)
 ### Functional programming
 
 ## the dot does _not_ indicate a method!
-help.start()
+# help.start()
 
 
 ## Example project
@@ -57,7 +54,7 @@ help.start()
 ## http://tutorials.iq/harvard.edu/R/Rintro/dataSets/babyNames.csv
 
 ## the readr package has more reliable plain text readers
-install.packages("readr")
+# install.packages("readr")
 
 ## add a package to the search path
 library("readr")
@@ -73,8 +70,13 @@ library("readr")
 # the mumber of rows
 
 # 2. read just the first 10 rows from 
-# http://tutorials.iq/harvard.edu/R/Rintro/dataSets/babyNames.csv
+# http://tutorials.iq.harvard.edu/R/Rintro/dataSets/babyNames.csv
+url <- "http://tutorials.iq.harvard.edu/R/Rintro/dataSets/babyNames.csv"
+all.names <- read_csv(url)
 
 # 3. read all the data and assign the result to an object named 
 # baby.names
+baby.names <- read_csv(url, n_max = 10)
+
+
 
