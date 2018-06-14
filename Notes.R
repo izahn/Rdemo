@@ -71,10 +71,15 @@ library("readr")
 ## Exercise 2
 # 1. open the help for read_csv and figure out how to limit
 # the mumber of rows
+help(read_csv)
 
 # 2. read just the first 10 rows from 
 # http://tutorials.iq/harvard.edu/R/Rintro/dataSets/babyNames.csv
+data=read_csv("http://tutorials.iq.harvard.edu/R/Rintro/dataSets/babyNames.csv",n_max=10)
+
+
+
 
 # 3. read all the data and assign the result to an object named 
-# baby.names
-
+                                        # baby.names
+baby.names = read_csv("http://tutorials.iq.harvard.edu/R/Rintro/dataSets/babyNames.csv")
