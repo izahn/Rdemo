@@ -75,7 +75,8 @@ help(read_csv)
 
 # 2. read just the first 10 rows from 
 # http://tutorials.iq/harvard.edu/R/Rintro/dataSets/babyNames.csv
-data=read_csv("http://tutorials.iq.harvard.edu/R/Rintro/dataSets/babyNames.csv",n_max=10)
+read_csv("http://tutorials.iq.harvard.edu/R/Rintro/dataSets/babyNames.csv",
+              n_max=10)
 
 
 
@@ -83,3 +84,41 @@ data=read_csv("http://tutorials.iq.harvard.edu/R/Rintro/dataSets/babyNames.csv",
 # 3. read all the data and assign the result to an object named 
                                         # baby.names
 baby.names = read_csv("http://tutorials.iq.harvard.edu/R/Rintro/dataSets/babyNames.csv")
+
+
+## data manipulation
+
+## just use dplyr
+
+install.packages("dplyr")
+
+library("dplyr")
+
+## inspect data objects
+glimpse(baby.names)
+
+class(baby.names)
+
+
+## selecting rows using filter
+filter(baby.names, 
+       Name == "jill")
+
+## jack or jill
+filter(baby.names,
+       Name == "jack" | Name == "jill")
+
+filter(baby.names,
+       Name %in% c("jack", "jill"))
+
+c("a", "b", "c") %in% c("a", "b")
+
+## other operators include
+
+# <, >, <=, >=, !=, |, &
+
+## Exercise 3
+
+## 1. extract data for the name "ashley"
+
+## 2. Restrict the previous extraction to include only years between 200 and 2004
