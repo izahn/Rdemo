@@ -121,4 +121,9 @@ c("a", "b", "c") %in% c("a", "b")
 
 ## 1. extract data for the name "ashley"
 
+ashley <- filter(baby.names, Name == "ashley")
+ashley
+
 ## 2. Restrict the previous extraction to include only years between 200 and 2004
+
+filter(ashley, Year <= 2004 & Year >= 2000)
